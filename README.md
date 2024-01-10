@@ -46,14 +46,14 @@ Installation steps (Windows)
 
 7. Install node
 ```
-	asdf install nodejs 20.10.0
-	asdf global nodejs 20.10.0
+ asdf install nodejs 20.10.0
+ asdf global nodejs 20.10.0
 
-	which node
-	#=> /home/username/.asdf/shims/node
-	node -v
-	#=> 20.10.0
+ which node
+ #=> /home/username/.asdf/shims/node
+ node -v
+ #=> 20.10.0
 
-	# Install yarn for Rails jsbundling/cssbundling or webpacker
-	npm install -g yarn
+ # Install yarn for Rails jsbundling/cssbundling or webpacker
+ npm install -g yarn
 ```
