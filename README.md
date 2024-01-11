@@ -44,7 +44,27 @@ Installation steps (Windows)
  ruby -v
 ```
 
-7. Install node
+7. Install Rails
+```
+ gem install rails -v 7.1.2
+ # confirm
+ rails -v
+```
+
+8. Install node
+```
+ asdf install nodejs 20.10.0
+ asdf global nodejs 20.10.0
+
+ which node
+ #=> /home/username/.asdf/shims/node
+ node -v
+ #=> 20.10.0
+
+ # Install yarn for Rails jsbundling/cssbundling or webpacker
+ npm install -g yarn
+```
+9. Install PostgreSQL
 ```
  asdf install nodejs 20.10.0
  asdf global nodejs 20.10.0
