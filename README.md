@@ -15,7 +15,9 @@ This project uses NextUI, react-icons and Tailwindcss
 ### Frontend
 Install dependencies
 ```
- cd frontend && yarn install
+ cd frontend 
+ yarn install
+ yarn build-css
 ```
 
 Run the application
