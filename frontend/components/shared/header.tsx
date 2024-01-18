@@ -12,7 +12,7 @@ import { FaBars, FaSearch } from 'react-icons/fa'
 
 export const Header = () => {
   return (
-    <div className="py-1.5 flex h-16 sticky top-0 border-b-[1px] border-solid border-gray-300 w-full">
+    <div className="z-50  bg-white py-1.5 flex h-16 sticky top-0 border-b-[1px] border-solid border-gray-300 w-full">
       {/* TODO: change padding for responsiveness */}
       <div className="container mx-auto px-6 lg:px-20 xl:px-36 2xl:px-48 items-center flex justify-between w-full">
         <Image src={'/logo3.png'} width={140} height={120} />
