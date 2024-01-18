@@ -77,3 +77,12 @@ Installation steps (Windows)
  # Install yarn for Rails jsbundling/cssbundling or webpacker
  npm install -g yarn
 ```
+
+
+
+This project uses NextUI, react-icons and Tailwindcss
+```
+ https://react-icons.github.io/react-icons/
+ https://storybook.nextui.org/
+ https://tailwindcss.com/docs/
+```
