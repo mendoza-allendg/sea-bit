@@ -13,6 +13,9 @@ This project uses NextUI, react-icons and Tailwindcss
 ```
 
 ### Frontend
+
+use port 3000
+
 Install dependencies
 ```
  cd frontend 
@@ -24,6 +27,23 @@ Run the application
 
 ```
  yarn dev
+```
+
+### Backend
+
+use port 3001
+
+Install dependencies
+```
+ bundle install
+ rails db:create
+ rails db:migrate
+```
+
+Run the application
+
+```
+ rails s
 ```
 
 
