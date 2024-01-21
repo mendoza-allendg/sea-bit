@@ -29,16 +29,8 @@ export default function DefaultLayout({
         {children}
       </main>
       <Footer />
-      <footer className="w-full flex items-center justify-center py-3">
-        <Link
-          isExternal
-          className="flex items-center gap-1 text-current"
-          href="https://nextui-docs-v2.vercel.app?utm_source=next-app-template"
-          title="nextui.org homepage"
-        >
-          <span className="text-default-600">Powered by</span>
-          <p className="text-primary">NextUI</p>
-        </Link>
+      <footer className='flex justify-center w-full text-slate-500 bg-gray-100 items-center text-sm p-2'>
+        Copyright © 2024 DiveNGo.com All rights reserved
       </footer>
     </div>
   )
