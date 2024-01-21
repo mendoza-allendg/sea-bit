@@ -1,6 +1,5 @@
 import { Footer } from '@/components/shared/Footer'
 import { Header } from '@/components/shared/Header'
-import { Link } from '@nextui-org/link'
 import NextHead from 'next/head'
 
 export default function DefaultLayout({
@@ -29,7 +28,7 @@ export default function DefaultLayout({
         {children}
       </main>
       <Footer />
-      <footer className='flex justify-center w-full text-slate-500 bg-gray-100 items-center text-sm p-2'>
+      <footer className="flex justify-center w-full text-slate-500 bg-gray-100 items-center text-sm p-2">
         Copyright © 2024 DiveNGo.com All rights reserved
       </footer>
     </div>
