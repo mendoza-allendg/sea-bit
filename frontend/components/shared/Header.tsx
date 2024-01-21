@@ -1,14 +1,13 @@
 import {
   Image,
-  Avatar,
   Button,
   Dropdown,
   DropdownItem,
   DropdownTrigger,
   DropdownMenu,
 } from '@nextui-org/react'
-
 import { FaBars, FaSearch } from 'react-icons/fa'
+import { AuthButton } from '@/components/authentication/AuthButton'
 
 export const Header = () => {
   return (
@@ -21,10 +20,7 @@ export const Header = () => {
             <FaSearch />
             <text className="text-sm">Search</text>
           </Button>
-          <Button variant="light" className="p-3">
-            <Avatar size="sm" color="default" radius="full" />
-            <text className="text-sm">Sign in</text>
-          </Button>
+          <AuthButton />
           <Dropdown className="p-1" placement="bottom">
             <DropdownTrigger>
               <Button variant="light">
