@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --fix .",
+    "lint": "eslint .",
     "format": "prettier --write .",
     "check-format": "prettier --check .",
     "build-css": "npx tailwindcss build -o public/output.css"
