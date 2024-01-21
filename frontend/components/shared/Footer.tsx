@@ -1,8 +1,9 @@
+
 export const Footer = () => {
   return (
     <div className="flex justify-center bg-gray-100 h-auto sticky bottom-0 border-b-[1px] border-solid border-gray-300 w-full">
-      <div className="flex-wrap px-4 items-center flex justify-between w-3/4">
-        <div className="flex text-base">
+      <div className="flex-wrap px-4 items-center flex justify-between w-full">
+        <div className="flex text-base ml-auto">
           <ul className="flex flex-col justify-start p-4">
             <span className="font-bold text-xl pb-2">Contact Us</span>
             <li className="list-none">Customer Support</li>
@@ -24,7 +25,7 @@ export const Footer = () => {
           </ul>
         </div>
 
-        <div className="flex p-4 text-base">
+        <div className="flex p-4 text-base mx-auto">
           <div>Payment Methods</div>
         </div>
       </div>
