@@ -1,3 +1,4 @@
+import { Footer } from '@/components/shared/Footer'
 import { Header } from '@/components/shared/Header'
 import { Link } from '@nextui-org/link'
 import NextHead from 'next/head'
@@ -27,6 +28,7 @@ export default function DefaultLayout({
       <main className="container mx-auto px-6 lg:px-20 xl:px-36 2xl:px-44 flex-grow">
         {children}
       </main>
+      <Footer />
       <footer className="w-full flex items-center justify-center py-3">
         <Link
           isExternal
