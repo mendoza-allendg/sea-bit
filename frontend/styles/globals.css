@@ -8,24 +8,15 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+@layer components {
+  text {
+    @apply font-sans text-sm; /* Apply default styles for text */
+  }
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
-  }
-}
-
-@media (min-width: 980px) {
-  :root {
-    --nux-max-content-width: 980px;
-  }
-}
-
-@media (min-width: 980px) {
-  .wrapper_cont,
-  .wrapper_header {
-    max-width: var(--nux-max-content-width);
-    box-sizing: initial;
   }
 }
