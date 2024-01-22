@@ -18,14 +18,14 @@ export const Header = () => {
         <div className="flex flex-h">
           <Button variant="light" className="p-3">
             <FaSearch />
-            <text className="text-sm">Search</text>
+            <span className="text-sm">Search</span>
           </Button>
           <AuthButton />
           <Dropdown className="p-1" placement="bottom">
             <DropdownTrigger>
               <Button variant="light">
                 <FaBars />
-                <text className="text-sm">Menu</text>
+                <span className="text-sm">Menu</span>
               </Button>
             </DropdownTrigger>
             <DropdownMenu aria-label="Static Actions">
