@@ -28,9 +28,6 @@ export default function DefaultLayout({
         {children}
       </main>
       <Footer />
-      <footer className="flex justify-center w-full text-slate-500 bg-gray-100 items-center text-sm p-2">
-        Copyright © 2024 DiveNGo.com All rights reserved
-      </footer>
     </div>
   )
 }
