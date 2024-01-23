@@ -2,17 +2,14 @@ import { Image, Link } from '@nextui-org/react'
 
 const contactMethods = [
   {
-    id: 0,
     name: 'Customer Support',
     link: '#',
   },
   {
-    id: 1,
     name: 'Service Guarantee',
     link: '#',
   },
   {
-    id: 2,
     name: 'Website Feedback',
     link: '#',
   },
@@ -20,17 +17,14 @@ const contactMethods = [
 
 const companyInfo = [
   {
-    id: 0,
     name: 'About Us',
     link: '#',
   },
   {
-    id: 1,
     name: 'Terms and Condition',
     link: '#',
   },
   {
-    id: 2,
     name: 'Privacy and Cookies',
     link: '#',
   },
@@ -38,12 +32,10 @@ const companyInfo = [
 
 const partnerMethods = [
   {
-    id: 0,
     name: 'Partner Portal',
     link: '#',
   },
   {
-    id: 1,
     name: 'Affiliate Program',
     link: '#',
   },
@@ -51,72 +43,58 @@ const partnerMethods = [
 
 const paymentImage = [
   {
-    id: 0,
     text: 'Visa',
     src: '/payment_logos/visa.png',
   },
   {
-    id: 1,
     text: 'Mastercard',
     src: '/payment_logos/mastercard.png',
   },
   {
-    id: 2,
     text: 'G-Cash',
     src: '/payment_logos/Gcash.png',
   },
   {
-    id: 3,
     text: 'GrabPay',
     src: '/payment_logos/GrabPay.png',
   },
   {
-    id: 4,
     text: 'PayMaya',
     src: '/payment_logos/PayMaya.png',
   },
   {
-    id: 5,
     text: 'BPI',
     src: '/payment_logos/BPI.png',
   },
   {
-    id: 6,
     text: 'Security Bank',
     src: '/payment_logos/SecurityBank.png',
   },
   {
-    id: 7,
     text: 'AUB',
     src: '/payment_logos/AUB.png',
   },
   {
-    id: 8,
     text: 'BillEase',
     src: '/payment_logos/BillEase.png',
   },
   {
-    id: 9,
     text: 'CoinsPH',
     src: '/payment_logos/CoinsPH.png',
   },
   {
-    id: 10,
     text: '7-11',
     src: '/payment_logos/7_eleven.png',
   },
   {
-    id: 11,
     text: 'Cebuana Lhuiller',
     src: '/payment_logos/CebuanaLL.png',
   },
   {
-    id: 12,
     text: 'M Lhuiller',
     src: '/payment_logos/M_LL.png',
   },
   {
-    id: 13,
     text: 'Landbank',
     src: '/payment_logos/Landbank.jpg',
   },
@@ -132,7 +110,7 @@ export const Footer = () => {
               <span className="font-bold text-base pb-1.5">Contact Us</span>
               <ul>
                 {contactMethods.map((contact) => (
-                  <li className="list-none pb-1" key={contact.id}>
+                  <li className="list-none pb-1" key={contact.name}>
                     <Link
                       href={contact.link}
                       color="foreground"
@@ -149,7 +127,7 @@ export const Footer = () => {
               <span className="font-bold text-base pb-1.5">Company</span>
               <ul>
                 {companyInfo.map((info) => (
-                  <li className="list-none pb-1" key={info.id}>
+                  <li className="list-none pb-1" key={info.name}>
                     <Link
                       href={info.link}
                       color="foreground"
@@ -168,7 +146,7 @@ export const Footer = () => {
               </span>
               <ul>
                 {partnerMethods.map((partner) => (
-                  <li className="list-none pb-1" key={partner.id}>
+                  <li className="list-none pb-1" key={partner.name}>
                     <Link
                       href={partner.link}
                       color="foreground"
@@ -188,7 +166,7 @@ export const Footer = () => {
               {paymentImage.map((pmeth) => (
                 <Image
                   className="mt-1 w-14 rounded-lg border"
-                  key={pmeth.id}
+                  key={pmeth.text}
                   src={pmeth.src}
                   alt={pmeth.text}
                 />
