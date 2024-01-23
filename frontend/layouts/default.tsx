@@ -1,5 +1,5 @@
+import { Footer } from '@/components/shared/Footer'
 import { Header } from '@/components/shared/Header'
-import { Link } from '@nextui-org/link'
 import NextHead from 'next/head'
 
 export default function DefaultLayout({
@@ -27,17 +27,7 @@ export default function DefaultLayout({
       <main className="container mx-auto px-6 lg:px-20 xl:px-36 2xl:px-44 flex-grow">
         {children}
       </main>
-      <footer className="w-full flex items-center justify-center py-3">
-        <Link
-          isExternal
-          className="flex items-center gap-1 text-current"
-          href="https://nextui-docs-v2.vercel.app?utm_source=next-app-template"
-          title="nextui.org homepage"
-        >
-          <span className="text-default-600">Powered by</span>
-          <p className="text-primary">NextUI</p>
-        </Link>
-      </footer>
+      <Footer />
     </div>
   )
 }
