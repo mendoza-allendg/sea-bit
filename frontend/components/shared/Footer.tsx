@@ -1,6 +1,6 @@
 import { Image, Link } from '@nextui-org/react'
 
-const contactMethods = [
+const COMPANY_CONTACT_METHODS = [
   {
     name: 'Customer Support',
     link: '#',
@@ -15,7 +15,7 @@ const contactMethods = [
   },
 ]
 
-const companyInfo = [
+const COMPANY_INFOS = [
   {
     name: 'About Us',
     link: '#',
@@ -30,7 +30,7 @@ const companyInfo = [
   },
 ]
 
-const partnerMethods = [
+const COMPANY_PARTNER_METHODS = [
   {
     name: 'Partner Portal',
     link: '#',
@@ -41,7 +41,7 @@ const partnerMethods = [
   },
 ]
 
-const paymentImage = [
+const PAYMENT_METHOD_LOGOS = [
   {
     text: 'Visa',
     src: '/payment_logos/visa.png',
@@ -109,8 +109,8 @@ export const Footer = () => {
             <div className="flex flex-col justify-start p-4">
               <span className="font-bold text-base pb-1.5">Contact Us</span>
               <ul>
-                {contactMethods.map((contact) => (
-                  <li className="list-none pb-1" key={contact.name}>
+                {COMPANY_CONTACT_METHODS.map((contact, i) => (
+                  <li className="list-none pb-1" key={i}>
                     <Link
                       href={contact.link}
                       color="foreground"
@@ -126,8 +126,8 @@ export const Footer = () => {
             <div className="flex flex-col justify-start p-4">
               <span className="font-bold text-base pb-1.5">Company</span>
               <ul>
-                {companyInfo.map((info) => (
-                  <li className="list-none pb-1" key={info.name}>
+                {COMPANY_INFOS.map((info, i) => (
+                  <li className="list-none pb-1" key={i}>
                     <Link
                       href={info.link}
                       color="foreground"
@@ -145,8 +145,8 @@ export const Footer = () => {
                 Partner With Us
               </span>
               <ul>
-                {partnerMethods.map((partner) => (
-                  <li className="list-none pb-1" key={partner.name}>
+                {COMPANY_PARTNER_METHODS.map((partner, i) => (
+                  <li className="list-none pb-1" key={i}>
                     <Link
                       href={partner.link}
                       color="foreground"
@@ -163,10 +163,10 @@ export const Footer = () => {
           <div className="flex flex-col p-4 text-sm justify-center mx-auto text-gray-500 flex-shrink flex-1 max-w-md">
             <div className="pb-1.5">Payment Methods</div>
             <div className="flex flex-wrap min-w-56 justify-center">
-              {paymentImage.map((pmeth) => (
+              {PAYMENT_METHOD_LOGOS.map((pmeth, i) => (
                 <Image
                   className="mt-1 w-14 rounded-lg border"
-                  key={pmeth.text}
+                  key={i}
                   src={pmeth.src}
                   alt={pmeth.text}
                 />
