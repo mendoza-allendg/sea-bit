@@ -102,12 +102,12 @@ const PAYMENT_METHOD_LOGOS = [
 
 export const Footer = () => {
   return (
-    <div className="flex justify-center bg-gray-100 h-auto static bottom-0 border-t-1 border-solid border-gray-300 w-full">
-      <div className="flex flex-col justify-center items-center w-full">
-        <div className="flex-wrap container px-6 lg:px-20 xl:px-35 2xl:px-14 items-start flex justify-center w-full py-7">
-          <div className="flex flex-nowrap flex-1 justify-center text-xs mx-auto flex-shrink-0 max-w-md">
+    <div className="static bottom-0 flex h-auto w-full justify-center border-t-1 border-solid border-gray-300 bg-gray-100">
+      <div className="flex w-full flex-col items-center justify-center">
+        <div className="xl:px-35 container flex w-full flex-wrap items-start justify-center px-6 py-7 lg:px-20 2xl:px-14">
+          <div className="mx-auto flex max-w-md flex-1 flex-shrink-0 flex-nowrap justify-center text-xs">
             <div className="flex flex-col justify-start p-4">
-              <span className="font-bold text-base pb-1.5">Contact Us</span>
+              <span className="pb-1.5 text-base font-bold">Contact Us</span>
               <ul>
                 {COMPANY_CONTACT_METHODS.map((contact, i) => (
                   <li className="list-none pb-1" key={i}>
@@ -124,7 +124,7 @@ export const Footer = () => {
             </div>
 
             <div className="flex flex-col justify-start p-4">
-              <span className="font-bold text-base pb-1.5">Company</span>
+              <span className="pb-1.5 text-base font-bold">Company</span>
               <ul>
                 {COMPANY_INFOS.map((info, i) => (
                   <li className="list-none pb-1" key={i}>
@@ -141,7 +141,7 @@ export const Footer = () => {
             </div>
 
             <div className="flex flex-col justify-start p-4">
-              <span className="font-bold text-base pb-1.5">
+              <span className="pb-1.5 text-base font-bold">
                 Partner With Us
               </span>
               <ul>
@@ -160,9 +160,9 @@ export const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-col p-4 text-sm justify-center mx-auto text-gray-500 flex-shrink flex-1 max-w-md">
+          <div className="mx-auto flex max-w-md flex-1 flex-shrink flex-col justify-center p-4 text-sm text-gray-500">
             <div className="pb-1.5">Payment Methods</div>
-            <div className="flex flex-wrap min-w-56 justify-center">
+            <div className="flex min-w-56 flex-wrap justify-center">
               {PAYMENT_METHOD_LOGOS.map((pmeth, i) => (
                 <Image
                   className="mt-1 w-14 rounded-lg border"
@@ -174,7 +174,7 @@ export const Footer = () => {
             </div>
           </div>
         </div>
-        <footer className="flex justify-center w-full text-slate-500 bg-gray-100 items-center text-sm p-3">
+        <footer className="flex w-full items-center justify-center bg-gray-100 p-3 text-sm text-slate-500">
           Copyright © 2024 DiveNGo.com All rights reserved
         </footer>
       </div>

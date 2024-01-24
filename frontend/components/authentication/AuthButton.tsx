@@ -48,9 +48,9 @@ export const AuthButton = () => {
                 <Button color="primary" size="lg">
                   Continue
                 </Button>
-                <div className="flex items-center justify-center flex-1 w-auto">
+                <div className="flex w-auto flex-1 items-center justify-center">
                   <Divider className=" w-1/4" />
-                  <span className="my-4 mx-4">Or Continue With</span>
+                  <span className="mx-4 my-4">Or Continue With</span>
                   <Divider className=" w-1/4" />
                 </div>
                 <Button
