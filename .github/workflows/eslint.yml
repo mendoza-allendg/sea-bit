@@ -25,4 +25,4 @@ jobs:
         run: cd frontend/ && yarn lint
 
       - name: Run Prettier
-        run: cd frontend/ && yarn format 
+        run: cd frontend/ && yarn check-format 

@@ -12,19 +12,21 @@ import {
 } from '@nextui-org/react'
 import { FcGoogle } from 'react-icons/fc'
 import { FaFacebook, FaApple } from 'react-icons/fa'
-// import { useAuthentication } from '@/apis/authentication/useAuthentication'
-// import { useEffect } from 'react'
+import { useRegistrationApi } from '@/apis/authentication/hooks'
+import { useEffect, useState } from 'react'
+import type { User } from '@/apis/authentication/hooks'
 
 export const AuthButton = () => {
   const { onOpen, isOpen, onOpenChange } = useDisclosure()
+  const [params, setParams] = useState<User>({
+    email: undefined,
+    password: undefined,
+  })
+  const { data, error, refetch: login } = useRegistrationApi(params)
 
-  // const {data, isLoading, refetch} = useAuthentication();
-
-  // useEffect(() => {
-  //   if (data) {
-  //     console.log(data);
-  //   }
-  // }, [data]);
+  useEffect(() => {
+    console.log(data)
+  }, [data])
 
   return (
     <>
@@ -42,10 +44,25 @@ export const AuthButton = () => {
           {
             <>
               <ModalHeader className="flex flex-col gap-1">Sign In</ModalHeader>
+              {error && <span>{error.message}</span>}
               <ModalBody>
-                <Input type="email" label="Email" variant="bordered" />
-                <Input type="password" label="Password" variant="bordered" />
-                <Button color="primary" size="lg">
+                <Input
+                  type="email"
+                  label="Email"
+                  variant="bordered"
+                  onValueChange={(value) =>
+                    setParams({ ...params, email: value })
+                  }
+                />
+                <Input
+                  type="password"
+                  label="Password"
+                  variant="bordered"
+                  onValueChange={(value) =>
+                    setParams({ ...params, password: value })
+                  }
+                />
+                <Button color="primary" size="lg" onClick={() => login()}>
                   Continue
                 </Button>
                 <div className="flex w-auto flex-1 items-center justify-center">
