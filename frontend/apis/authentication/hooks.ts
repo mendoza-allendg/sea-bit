@@ -1,4 +1,4 @@
-import { useQuery } from '@tanstack/react-query'
+import { useMutation } from '@tanstack/react-query'
 
 export type User = {
   email: string | undefined
@@ -20,7 +20,10 @@ const postData = async (params: User) => {
       'Content-Type': 'application/json',
     }),
   }
-  const response = await fetch('http://localhost:3001/api/signup', options)
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/signup`,
+    options,
+  )
   const data = await response.json()
 
   if (!response.ok) {
@@ -30,12 +33,9 @@ const postData = async (params: User) => {
   return data
 }
 
-export const useRegistrationApi = (params: User) => {
-  return useQuery({
-    queryKey: ['signup', params],
-    queryFn: () => postData(params),
-    staleTime: 5 * 1000,
-    enabled: false,
-    retry: false,
+export const useRegistrationApi = () => {
+  return useMutation({
+    mutationKey: ['signup'],
+    mutationFn: (request: User) => postData(request),
   })
 }
