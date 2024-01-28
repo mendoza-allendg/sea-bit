@@ -5,17 +5,28 @@
  * OpenAPI spec version: 1.0.0
  */
 import axios from 'axios'
-import type { AxiosRequestConfig, AxiosResponse } from 'axios'
-import type { UserDTO, UserRegistrationParams } from '../models'
+import type {
+  AxiosRequestConfig,
+  AxiosResponse
+} from 'axios'
+import type {
+  UserDTO,
+  UserRegistrationParams
+} from '../models'
 
-/**
+
+
+
+  /**
  * @summary Register user
  */
 export const userRegistration = <TData = AxiosResponse<UserDTO>>(
-  userRegistrationParams: UserRegistrationParams,
-  options?: AxiosRequestConfig,
-): Promise<TData> => {
-  return axios.post(`/api/signup`, userRegistrationParams, options)
-}
+    userRegistrationParams: UserRegistrationParams, options?: AxiosRequestConfig
+ ): Promise<TData> => {
+    return axios.post(
+      `/api/signup`,
+      userRegistrationParams,options
+    );
+  }
 
 export type UserRegistrationResult = AxiosResponse<UserDTO>
