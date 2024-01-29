@@ -48,6 +48,12 @@ export const AuthButton = () => {
                 <Controller
                   name="email"
                   control={control}
+                  // rules={{
+                  //   minLength: {
+                  //     value: 6,
+                  //     message: 'FUCK THE POLICE'
+                  //   }
+                  // }}
                   render={({ field }) => (
                     <Input
                       type="email"
