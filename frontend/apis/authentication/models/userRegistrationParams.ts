@@ -6,6 +6,6 @@
  */
 
 export type UserRegistrationParams = {
-  email: string;
-  password: string;
-};
+  email: string
+  password: string
+}

@@ -6,6 +6,6 @@
  */
 
 export interface ErrorDTO {
-  code: number;
-  message: string;
+  code: number
+  message: string
 }
