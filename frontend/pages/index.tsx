@@ -1,75 +1,14 @@
-import { Input, Button, Divider } from '@nextui-org/react'
-
 import DefaultLayout from '@/layouts/default'
-import { FaSearch, FaRegCalendarAlt, FaUserAlt } from 'react-icons/fa'
-
+import { LocationCarousel, SearchBar } from '@/components/home'
 export default function IndexPage() {
   return (
     <DefaultLayout>
-      <section className="p-b-8 md:p-b-10 flex flex-col items-center justify-center gap-4">
-        <div className="flex min-h-[24rem] w-screen items-center justify-center rounded-b-md bg-[url('/landing-page-image.jpg')] bg-cover">
-          <div className="flex w-4/5 max-w-[50rem] flex-col items-center justify-between rounded-md bg-white px-1 py-1 shadow-xl sm:flex-row">
-            <Input
-              variant="flat"
-              size="sm"
-              fullWidth={false}
-              radius="md"
-              placeholder="Where are you going?"
-              startContent={<FaSearch />}
-              className="mb-3 sm:mb-0"
-              classNames={{
-                input: ['bg-transparent', 'w-[20rem]'],
-                innerWrapper: 'bg-transparent',
-                inputWrapper: 'bg-transparent',
-              }}
-            />
-            <Divider
-              className="mx-1 hidden min-h-7 sm:block"
-              orientation="vertical"
-            />
-            {/* <Divider className=' w-11/12 sm:hidden' orientation="horizontal" /> */}
-            <Input
-              variant="flat"
-              size="sm"
-              fullWidth={false}
-              radius="md"
-              startContent={<FaRegCalendarAlt />}
-              className="mb-3 sm:mb-0"
-              classNames={{
-                input: ['bg-transparent'],
-                innerWrapper: 'bg-transparent',
-                inputWrapper: 'bg-transparent',
-              }}
-              placeholder="Dates"
-            />
-            <Divider
-              className="mx-1 hidden min-h-7 sm:block"
-              orientation="vertical"
-            />
-            <Input
-              variant="flat"
-              size="sm"
-              fullWidth={false}
-              radius="md"
-              startContent={<FaUserAlt />}
-              className="mb-3 sm:mb-0"
-              classNames={{
-                input: ['bg-transparent'],
-                innerWrapper: 'bg-transparent',
-                inputWrapper: 'bg-transparent',
-              }}
-              placeholder="Divers"
-            />
-            <Button
-              color="primary"
-              variant="solid"
-              size="lg"
-              className="ml-2"
-              radius="md"
-            >
-              <span className="text-md">Search</span>
-            </Button>
-          </div>
+      <section className="p-b-8 md:p-b-10 mt-72 flex flex-col items-center justify-center gap-4">
+        <div className="flex min-h-[28rem] w-screen items-center justify-center rounded-b-md bg-[url('/landing-page-image.jpg')] bg-cover">
+          <SearchBar />
+        </div>
+        <div className="flex w-full py-5">
+          <LocationCarousel />
         </div>
       </section>
     </DefaultLayout>
