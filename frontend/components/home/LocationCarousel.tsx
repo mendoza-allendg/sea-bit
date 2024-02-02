@@ -5,10 +5,10 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
-import { LocationCard } from './LocationCard'
-import type { Location } from './LocationCard'
+import { LocationCard, type Location } from './LocationCard'
+import { SectionTitle } from '../shared/typography'
 
-const sample_locations: Location[] = [
+const SAMPLE_LOCATIONS: Location[] = [
   {
     name: 'Coron, Palawan',
     src: '/locations/palawan.jpg',
@@ -37,6 +37,7 @@ const sample_locations: Location[] = [
 export const LocationCarousel = () => {
   return (
     <div className="min-h-[300px] w-full">
+      <SectionTitle text="Where to?" />
       <Swiper
         spaceBetween={15}
         slidesPerView={4}
@@ -61,9 +62,9 @@ export const LocationCarousel = () => {
           1024: { slidesPerView: 4, spaceBetween: 15 },
         }}
       >
-        {sample_locations.map((location, i) => (
+        {SAMPLE_LOCATIONS.map((location, i) => (
           <SwiperSlide key={i}>
-            <div className="mx-1 mb-10 mt-10">
+            <div className="mx-1 mb-10 mt-6">
               <LocationCard location={location} />
             </div>
           </SwiperSlide>
