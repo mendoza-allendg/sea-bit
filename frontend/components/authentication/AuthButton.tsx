@@ -12,19 +12,20 @@ import {
 } from '@nextui-org/react'
 import { FcGoogle } from 'react-icons/fc'
 import { FaFacebook, FaApple } from 'react-icons/fa'
-// import { useAuthentication } from '@/apis/authentication/useAuthentication'
-// import { useEffect } from 'react'
+import { useRegistrationApi } from '@/apis/authentication/hooks'
+import { useForm, Controller } from 'react-hook-form'
 
 export const AuthButton = () => {
+  const { control, handleSubmit } = useForm({
+    defaultValues: {
+      email: '',
+      password: '',
+    },
+  })
+
   const { onOpen, isOpen, onOpenChange } = useDisclosure()
 
-  // const {data, isLoading, refetch} = useAuthentication();
-
-  // useEffect(() => {
-  //   if (data) {
-  //     console.log(data);
-  //   }
-  // }, [data]);
+  const { error, mutate } = useRegistrationApi()
 
   return (
     <>
@@ -42,12 +43,46 @@ export const AuthButton = () => {
           {
             <>
               <ModalHeader className="flex flex-col gap-1">Sign In</ModalHeader>
+              {error && <span>{error.message}</span>}
               <ModalBody>
-                <Input type="email" label="Email" variant="bordered" />
-                <Input type="password" label="Password" variant="bordered" />
-                <Button color="primary" size="lg">
+                <Controller
+                  name="email"
+                  control={control}
+                  // rules={{
+                  //   minLength: {
+                  //     value: 6,
+                  //     message: 'FUCK THE POLICE'
+                  //   }
+                  // }}
+                  render={({ field }) => (
+                    <Input
+                      type="email"
+                      label="Email"
+                      variant="bordered"
+                      {...field}
+                    />
+                  )}
+                />
+                <Controller
+                  name="password"
+                  control={control}
+                  render={({ field }) => (
+                    <Input
+                      type="password"
+                      label="password"
+                      variant="bordered"
+                      {...field}
+                    />
+                  )}
+                />
+                <Button
+                  color="primary"
+                  size="lg"
+                  onClick={handleSubmit((data) => mutate(data))}
+                >
                   Continue
                 </Button>
+
                 <div className="flex w-auto flex-1 items-center justify-center">
                   <Divider className=" w-1/4" />
                   <span className="mx-4 my-4">Or Continue With</span>
