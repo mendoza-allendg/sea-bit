@@ -16,10 +16,8 @@ export const Header = () => {
       {/* TODO: change padding for responsiveness */}
       <div className="container mx-auto flex w-full items-center justify-between px-6 lg:px-20 xl:px-36 2xl:px-48">
         <Link href="/">
-          {' '}
           <Image src={'/logo3.png'} width={140} height={120} />
         </Link>
-
         <div className="flex-h flex">
           <Button variant="light" className="p-3">
             <FaSearch />
