@@ -8,7 +8,7 @@ export default function DefaultLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className="relative flex h-screen flex-col items-center justify-center">
+    <div className="relative flex flex-col items-center justify-center overflow-x-hidden">
       <NextHead>
         <title>sea-bit</title>
         <meta key="title" content={'sea-bit'} property="og:title" />

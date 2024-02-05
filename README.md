@@ -46,5 +46,10 @@ Run the application
  rails s
 ```
 
+For new orval updates, run
+```
+ orval
+```
+
 
 
