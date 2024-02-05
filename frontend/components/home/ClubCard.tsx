@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button, Card, CardFooter, Image } from '@nextui-org/react'
+import Link from 'next/link'
 
 export type Club = {
   name: string
@@ -26,7 +27,7 @@ export const ClubCard = ({ club }: { club: Club }) => {
           </div>
         </div>
         <Button radius="full" size="sm" color="primary" variant="solid">
-          Book
+          <Link href="/booking">Book</Link>
         </Button>
       </CardFooter>
     </Card>
