@@ -37,7 +37,7 @@ const SAMPLE_LOCATIONS: Location[] = [
 export const LocationCarousel = () => {
   return (
     <div className="min-h-[300px] w-full">
-      <SectionTitle text="Where to?" />
+      <SectionTitle>Where to?</SectionTitle>
       <Swiper
         spaceBetween={15}
         slidesPerView={4}

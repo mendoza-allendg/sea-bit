@@ -48,7 +48,7 @@ const SAMPLE_CLUBS: Club[] = [
 export const ClubCarousel = () => {
   return (
     <div className="min-h-[200px] w-full">
-      <SectionTitle text="Find your favorite clubs" />
+      <SectionTitle>Find your favorite clubs</SectionTitle>
       <Swiper
         spaceBetween={15}
         slidesPerView={6}
