@@ -73,7 +73,7 @@ export const ClubCarousel = () => {
       >
         {SAMPLE_CLUBS.map((club, i) => (
           <SwiperSlide key={i}>
-            <div className="mx-1 mb-10 mt-6">
+            <div className="mx-1 mb-10">
               <ClubCard club={club} />
             </div>
           </SwiperSlide>
