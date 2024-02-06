@@ -35,7 +35,7 @@ const SAMPLE_LOCATIONS: Location[] = [
 ]
 export const LocationCarousel = () => {
   return (
-    <div className="min-h-[300px] w-full">
+    <div className="min-h-[250px] w-full">
       <Swiper
         spaceBetween={15}
         slidesPerView={4}
@@ -62,7 +62,7 @@ export const LocationCarousel = () => {
       >
         {SAMPLE_LOCATIONS.map((location, i) => (
           <SwiperSlide key={i}>
-            <div className="mx-1 mb-10 mt-6">
+            <div className="mx-1 mb-10">
               <LocationCard location={location} />
             </div>
           </SwiperSlide>
