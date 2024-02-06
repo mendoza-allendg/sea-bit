@@ -21,7 +21,7 @@ export default function IndexPage() {
           </div>
         </div>
         <Gallery />
-        <SectionBase title={'Packages'} />
+        {/* <SectionBase title={'Packages'} /> */}
       </section>
     </DefaultLayout>
   )
