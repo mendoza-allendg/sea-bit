@@ -1,6 +1,5 @@
 import DefaultLayout from '@/layouts/default'
 import { MainTitle } from '@/components/shared/typography'
-import { SectionBase } from '@/components/shared/base'
 
 import { Card, Image } from '@nextui-org/react'
 import { Gallery } from '@/components/booking'
