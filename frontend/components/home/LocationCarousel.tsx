@@ -6,7 +6,6 @@ import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
 import { LocationCard, type Location } from './LocationCard'
-import { SectionTitle } from '../shared/typography'
 
 const SAMPLE_LOCATIONS: Location[] = [
   {
@@ -37,7 +36,6 @@ const SAMPLE_LOCATIONS: Location[] = [
 export const LocationCarousel = () => {
   return (
     <div className="min-h-[300px] w-full">
-      <SectionTitle>Where to?</SectionTitle>
       <Swiper
         spaceBetween={15}
         slidesPerView={4}

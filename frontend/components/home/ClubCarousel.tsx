@@ -6,7 +6,6 @@ import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
 import { type Club, ClubCard } from './ClubCard'
-import { SectionTitle } from '../shared/typography'
 
 const SAMPLE_CLUBS: Club[] = [
   {
@@ -48,7 +47,6 @@ const SAMPLE_CLUBS: Club[] = [
 export const ClubCarousel = () => {
   return (
     <div className="min-h-[200px] w-full">
-      <SectionTitle>Find your favorite clubs</SectionTitle>
       <Swiper
         spaceBetween={15}
         slidesPerView={6}
