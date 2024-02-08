@@ -2,8 +2,9 @@ import DefaultLayout from '@/layouts/default'
 import { MainTitle } from '@/components/shared/typography'
 
 import { Card, Image } from '@nextui-org/react'
-import { Gallery, PackageSelection } from '@/components/booking'
+import { Calendar, Gallery, PackageSelection } from '@/components/booking'
 import { SectionBase } from '@/components/shared/base'
+
 export default function IndexPage() {
   return (
     <DefaultLayout>
@@ -23,6 +24,9 @@ export default function IndexPage() {
         <Gallery />
         <SectionBase title={'Packages'}>
           <PackageSelection />
+        </SectionBase>
+        <SectionBase title={'Select Dates'}>
+          <Calendar />
         </SectionBase>
       </section>
     </DefaultLayout>
