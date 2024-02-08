@@ -12,7 +12,7 @@ export const Calendar = () => {
 
   return (
     <>
-      <div className="h-[350px] sm:hidden">
+      <div className="h-[350px] xl:hidden">
         <DayPicker
           mode="range"
           selected={selectedDateRange}
@@ -21,7 +21,7 @@ export const Calendar = () => {
           showOutsideDays={true}
         />
       </div>
-      <div className="hidden h-[350px] sm:block">
+      <div className="hidden h-[350px] xl:block">
         <DayPicker
           mode="range"
           selected={selectedDateRange}
