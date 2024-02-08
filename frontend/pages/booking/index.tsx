@@ -2,7 +2,12 @@ import DefaultLayout from '@/layouts/default'
 import { MainTitle } from '@/components/shared/typography'
 
 import { Card, Image } from '@nextui-org/react'
-import { Calendar, Gallery, PackageSelection } from '@/components/booking'
+import {
+  BookingSummary,
+  Calendar,
+  Gallery,
+  PackageSelection,
+} from '@/components/booking'
 import { SectionBase } from '@/components/shared/base'
 
 export default function IndexPage() {
@@ -22,12 +27,19 @@ export default function IndexPage() {
           </div>
         </div>
         <Gallery />
-        <SectionBase title={'Packages'}>
-          <PackageSelection />
-        </SectionBase>
-        <SectionBase title={'Select Dates'}>
-          <Calendar />
-        </SectionBase>
+        <div className="md:flex md:justify-between">
+          <div className="md:pr-4">
+            <SectionBase title={'Packages'}>
+              <PackageSelection />
+            </SectionBase>
+            <SectionBase title={'Select Dates'}>
+              <Calendar />
+            </SectionBase>
+          </div>
+          <div className="flex-1 justify-end pt-5">
+            <BookingSummary />
+          </div>
+        </div>
       </section>
     </DefaultLayout>
   )
