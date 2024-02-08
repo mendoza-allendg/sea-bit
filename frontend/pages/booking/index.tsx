@@ -36,7 +36,7 @@ export default function IndexPage() {
               <Calendar />
             </SectionBase>
           </div>
-          <div className="hidden flex-1 justify-end pt-5 md:block">
+          <div className="flex-1 justify-end pt-5">
             <BookingSummaryCard />
           </div>
         </div>
