@@ -7,6 +7,7 @@ import {
   Calendar,
   Gallery,
   PackageSelection,
+  AddOns,
 } from '@/components/booking'
 import { SectionBase } from '@/components/shared/base'
 
@@ -31,6 +32,9 @@ export default function IndexPage() {
           <div className="md:pr-4">
             <SectionBase title={'Packages'}>
               <PackageSelection />
+            </SectionBase>
+            <SectionBase title={'Add ons'}>
+              <AddOns />
             </SectionBase>
             <SectionBase title={'Select Dates'}>
               <Calendar />
