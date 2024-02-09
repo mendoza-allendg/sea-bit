@@ -31,7 +31,7 @@ export const BookingSummary = () => {
       <div className="hidden md:block">
         <Card shadow={'lg'} className="ml-auto min-w-[250px] max-w-[400px] p-3">
           <CardHeader className="gap-3">
-            <span className="text-2xl">Summary</span>
+            <span className="text-2xl font-semibold">Summary</span>
           </CardHeader>
           <CardBody className="mt-2">
             <div className="flex flex-col gap-4">
