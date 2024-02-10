@@ -12,6 +12,9 @@
   span {
     @apply font-sans text-sm; /* Apply default styles for text */
   }
+  h1 {
+    @apply font-sans;
+  }
 }
 @media (prefers-color-scheme: dark) {
   :root {
