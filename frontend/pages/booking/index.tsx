@@ -3,7 +3,7 @@ import { MainTitle } from '@/components/shared/typography'
 
 import { Card, Image } from '@nextui-org/react'
 import {
-  BookingSummaryCard,
+  BookingSummary,
   Calendar,
   Gallery,
   PackageSelection,
@@ -37,7 +37,7 @@ export default function IndexPage() {
             </SectionBase>
           </div>
           <div className="flex-1 justify-end pt-5">
-            <BookingSummaryCard />
+            <BookingSummary />
           </div>
         </div>
       </section>

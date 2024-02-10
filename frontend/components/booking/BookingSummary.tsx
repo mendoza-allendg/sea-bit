@@ -25,7 +25,7 @@ const ReservationButton = (props: ButtonProps) => {
   )
 }
 
-export const BookingSummaryCard = () => {
+export const BookingSummary = () => {
   return (
     <>
       <div className="hidden md:block">
