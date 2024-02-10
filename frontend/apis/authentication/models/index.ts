@@ -5,6 +5,6 @@
  * OpenAPI spec version: 1.0.0
  */
 
-export * from './errorDTO';
-export * from './userDTO';
-export * from './userRegistrationParams';
+export * from './errorDTO'
+export * from './userDTO'
+export * from './userRegistrationParams'
