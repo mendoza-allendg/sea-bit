@@ -1,7 +1,6 @@
-import { Header } from '@/components/shared/header'
+import { Header } from '@/components/shared/Header'
 import { Link } from '@nextui-org/link'
 import NextHead from 'next/head'
-import Script from 'next/script'
 
 export default function DefaultLayout({
   children,
@@ -23,10 +22,9 @@ export default function DefaultLayout({
         <link href="/favicon.ico" rel="icon" />
         <link href="./output.css" rel="stylesheet" />
       </NextHead>
-      {/* <Script src="https://cdn.tailwindcss.com" /> */}
       <Header />
       {/* TODO: change padding for responsiveness */}
-      <main className="container mx-auto px-6 px-6 lg:px-20 xl:px-36 2xl:px-44 flex-grow">
+      <main className="container mx-auto px-6 lg:px-20 xl:px-36 2xl:px-44 flex-grow">
         {children}
       </main>
       <footer className="w-full flex items-center justify-center py-3">
