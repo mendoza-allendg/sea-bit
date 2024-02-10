@@ -9,7 +9,7 @@
 }
 
 @layer components {
-  text {
+  span {
     @apply font-sans text-sm; /* Apply default styles for text */
   }
 }

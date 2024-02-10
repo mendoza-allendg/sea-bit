@@ -67,7 +67,7 @@ export default function IndexPage() {
               className="ml-2"
               radius="md"
             >
-              <text className="text-md">Search</text>
+              <span className="text-md">Search</span>
             </Button>
           </div>
         </div>
