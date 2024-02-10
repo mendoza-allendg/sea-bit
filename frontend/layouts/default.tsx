@@ -1,4 +1,7 @@
+import { Header } from '@/components/shared/header'
 import { Link } from '@nextui-org/link'
+import NextHead from 'next/head'
+import Script from 'next/script'
 
 export default function DefaultLayout({
   children,
@@ -6,8 +9,24 @@ export default function DefaultLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className="relative flex flex-col h-screen">
-      <main className="container mx-auto max-w-7xl px-6 flex-grow">
+    <div className="relative flex flex-col h-screen justify-center items-center">
+      <NextHead>
+        <title>sea-bit</title>
+        <meta key="title" content={'sea-bit'} property="og:title" />
+        <meta content={'free diving booking'} property="og:description" />
+        <meta content={'free diving booking'} name="description" />
+        <meta
+          key="viewport"
+          content="viewport-fit=cover, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+          name="viewport"
+        />
+        <link href="/favicon.ico" rel="icon" />
+        <link href="./output.css" rel="stylesheet" />
+      </NextHead>
+      {/* <Script src="https://cdn.tailwindcss.com" /> */}
+      <Header />
+      {/* TODO: change padding for responsiveness */}
+      <main className="container mx-auto px-6 px-6 lg:px-20 xl:px-36 2xl:px-44 flex-grow">
         {children}
       </main>
       <footer className="w-full flex items-center justify-center py-3">
