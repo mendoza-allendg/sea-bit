@@ -1,8 +1,9 @@
 import React, { ReactNode } from 'react'
-import { Checkbox, CheckboxGroup, RadioGroup, cn } from '@nextui-org/react'
+import { Checkbox, CheckboxGroup, cn } from '@nextui-org/react'
 import { GiSwimfins, GiWeight } from 'react-icons/gi'
-import { PiBowlFoodLight } from 'react-icons/pi'
+import { PiBowlFoodLight, PiBowlFoodFill } from 'react-icons/pi'
 import { FaCar } from 'react-icons/fa'
+import { MdOutlineBreakfastDining, MdFoodBank } from 'react-icons/md'
 
 type Props = {
   icon: ReactNode
@@ -41,39 +42,66 @@ export const AddOns = () => {
   const [groupSelected, setGroupSelected] = React.useState<any[]>([])
 
   return (
-    <div className="flex w-full flex-col gap-1">
+    <div className="flex flex-row gap-1">
       <CheckboxGroup
         value={groupSelected}
         onValueChange={setGroupSelected}
-        classNames={{
-          base: 'w-full',
-        }}
+        className="w-full"
       >
-        <AddonOption
-          value="fins"
-          icon={<GiSwimfins size={30} />}
-          label="Fins Rental"
-          price="500"
-        />
-        <RadioGroup size="sm"></RadioGroup>
-        <AddonOption
-          value="weights"
-          icon={<GiWeight size={30} />}
-          label="Weights Rental"
-          price="250"
-        />
-        <AddonOption
-          value="food"
-          icon={<PiBowlFoodLight size={30} />}
-          label="Food"
-          price="300"
-        />
-        <AddonOption
-          value="transport"
-          icon={<FaCar size={30} />}
-          label="Carpool"
-          price="400"
-        />
+        <div className="flex w-full flex-col gap-4 md:flex-row">
+          <div className="flex w-full flex-grow flex-col gap-4">
+            <AddonOption
+              value="finsL"
+              icon={<GiSwimfins size={30} />}
+              label="Long Fins"
+              price="500"
+            />
+            <AddonOption
+              value="finsS"
+              icon={<GiSwimfins size={30} />}
+              label="Short Fins"
+              price="500"
+            />
+            <AddonOption
+              value="weights"
+              icon={<GiWeight size={30} />}
+              label="Weights"
+              price="250"
+            />
+            <AddonOption
+              value="transport"
+              icon={<FaCar size={30} />}
+              label="Carpool"
+              price="400"
+            />
+          </div>
+          <div className="flex w-full flex-col gap-4">
+            <AddonOption
+              value="FBM"
+              icon={<MdFoodBank size={30} />}
+              label="Full Board Meals"
+              price="1,000"
+            />
+            <AddonOption
+              value="Breakfast"
+              icon={<MdOutlineBreakfastDining size={30} />}
+              label="Breakfast"
+              price="250"
+            />
+            <AddonOption
+              value="Lunch"
+              icon={<PiBowlFoodLight size={30} />}
+              label="Lunch"
+              price="250"
+            />
+            <AddonOption
+              value="Dinner"
+              icon={<PiBowlFoodFill size={30} />}
+              label="Dinner"
+              price="250"
+            />
+          </div>
+        </div>
       </CheckboxGroup>
     </div>
   )
