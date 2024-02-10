@@ -6,9 +6,9 @@ import { FaSearch, FaRegCalendarAlt, FaUserAlt } from 'react-icons/fa'
 export default function IndexPage() {
   return (
     <DefaultLayout>
-      <section className="flex flex-col items-center justify-center gap-4 p-b-8 md:p-b-10">
-        <div className="flex justify-center items-center bg-[url('/landing-page-image.jpg')] bg-cover rounded-b-md w-screen min-h-[24rem]">
-          <div className="flex flex-col sm:flex-row items-center w-4/5 max-w-[50rem] justify-between rounded-md bg-white shadow-xl px-1 py-1">
+      <section className="p-b-8 md:p-b-10 flex flex-col items-center justify-center gap-4">
+        <div className="flex min-h-[24rem] w-screen items-center justify-center rounded-b-md bg-[url('/landing-page-image.jpg')] bg-cover">
+          <div className="flex w-4/5 max-w-[50rem] flex-col items-center justify-between rounded-md bg-white px-1 py-1 shadow-xl sm:flex-row">
             <Input
               variant="flat"
               size="sm"
@@ -24,7 +24,7 @@ export default function IndexPage() {
               }}
             />
             <Divider
-              className="hidden min-h-7 mx-1 sm:block"
+              className="mx-1 hidden min-h-7 sm:block"
               orientation="vertical"
             />
             {/* <Divider className=' w-11/12 sm:hidden' orientation="horizontal" /> */}
@@ -43,7 +43,7 @@ export default function IndexPage() {
               placeholder="Dates"
             />
             <Divider
-              className="hidden min-h-7 mx-1 sm:block"
+              className="mx-1 hidden min-h-7 sm:block"
               orientation="vertical"
             />
             <Input

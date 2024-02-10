@@ -8,7 +8,7 @@ export default function DefaultLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className="relative flex flex-col h-screen justify-center items-center">
+    <div className="relative flex h-screen flex-col items-center justify-center">
       <NextHead>
         <title>sea-bit</title>
         <meta key="title" content={'sea-bit'} property="og:title" />
@@ -24,7 +24,7 @@ export default function DefaultLayout({
       </NextHead>
       <Header />
       {/* TODO: change padding for responsiveness */}
-      <main className="container mx-auto px-6 lg:px-20 xl:px-36 2xl:px-44 flex-grow">
+      <main className="container mx-auto flex-grow px-6 lg:px-20 xl:px-36 2xl:px-44">
         {children}
       </main>
       <Footer />
