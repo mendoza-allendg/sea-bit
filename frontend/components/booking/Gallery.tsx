@@ -34,6 +34,7 @@ export const Gallery = () => {
   return (
     <>
       <div className="relative hidden sm:block ">
+        {/* TODO: Dynamic picture setting */}
         <div className="grid grid-cols-2 gap-1">
           <Image
             alt={'Default Image'}
