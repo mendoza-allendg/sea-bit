@@ -52,8 +52,8 @@ export const CustomRadio = (props: Props) => {
 
 export const PackageSelection = () => {
   return (
-    <RadioGroup>
-      <div className="flex flex-col gap-2 sm:flex-row">
+    <RadioGroup size="sm">
+      <div className="flex flex-col flex-wrap gap-2 md:flex-row">
         <CustomRadio
           description="Introduction to freeediving"
           price="1,750"
