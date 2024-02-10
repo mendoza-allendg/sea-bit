@@ -7,7 +7,7 @@ export default function IndexPage() {
   return (
     <DefaultLayout>
       <section className="flex flex-col items-center justify-center gap-4 p-b-8 md:p-b-10">
-        <div className="flex justify-center items-center bg-[url('/landing-page-image.jpg')] bg-cover rounded-b-md w-screen min-h-[32rem]">
+        <div className="flex justify-center items-center bg-[url('/landing-page-image.jpg')] bg-cover rounded-b-md w-screen min-h-[24rem]">
           <div className="flex flex-col sm:flex-row items-center w-4/5 max-w-[50rem] justify-between rounded-md bg-white shadow-xl px-1 py-1">
             <Input
               variant="flat"
