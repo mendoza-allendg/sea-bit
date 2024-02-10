@@ -22,7 +22,7 @@ export default function IndexPage() {
         </div>
         <Gallery />
         <SectionBase title={'Packages'}>
-      <PackageSelection />
+          <PackageSelection />
         </SectionBase>
       </section>
     </DefaultLayout>
