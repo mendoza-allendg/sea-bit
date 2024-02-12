@@ -1,5 +1,5 @@
-import { Image, Link } from '@nextui-org/react'
-
+import { Link } from '@nextui-org/react'
+import Image from 'next/image'
 const COMPANY_CONTACT_METHODS = [
   {
     name: 'Customer Support',
@@ -169,6 +169,8 @@ export const Footer = () => {
                   key={i}
                   src={pmeth.src}
                   alt={pmeth.text}
+                  width={500}
+                  height={500}
                 />
               ))}
             </div>

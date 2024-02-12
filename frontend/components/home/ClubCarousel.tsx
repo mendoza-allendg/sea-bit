@@ -1,12 +1,12 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Navigation } from 'swiper/modules'
-
+import Image from 'next/image'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
 import React from 'react'
-import { Button, Card, CardFooter, Image } from '@nextui-org/react'
+import { Button, Card, CardFooter } from '@nextui-org/react'
 import Link from 'next/link'
 
 type Club = {
@@ -59,10 +59,11 @@ const ClubCard = ({ club }: { club: Club }) => {
   return (
     <Card className="max-h-[250px] w-full">
       <Image
-        removeWrapper
         alt="Relaxing app background"
         className="z-0 min-h-[140px] object-fill"
         src={src}
+        width={500}
+        height={500}
       />
       <CardFooter className="flex items-center">
         <div className="flex flex-grow flex-col">

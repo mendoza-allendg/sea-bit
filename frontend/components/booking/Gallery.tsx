@@ -1,8 +1,8 @@
 import { FaGripHorizontal } from 'react-icons/fa'
-import { Button, Image } from '@nextui-org/react'
+import { Button } from '@nextui-org/react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Navigation } from 'swiper/modules'
-
+import Image from 'next/image'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
@@ -40,6 +40,8 @@ export const Gallery = () => {
             alt={'Default Image'}
             className="z-0 h-full w-full rounded-none rounded-l-lg object-fill"
             src={'/clubs/shots/01.jpg'}
+            width={500}
+            height={500}
           />
           <div className="grid grid-cols-2 gap-1">
             <div className="col-span-full grid grid-cols-subgrid gap-1">
@@ -47,11 +49,15 @@ export const Gallery = () => {
                 alt={'Default Image'}
                 className="z-0 h-full w-full rounded-none object-cover"
                 src={'/clubs/shots/02.jpg'}
+                width={500}
+                height={500}
               />
               <Image
                 alt={'Default Image'}
                 className="z-0 h-full w-full rounded-none rounded-tr-lg object-cover"
                 src={'/clubs/shots/03.jpg'}
+                width={500}
+                height={500}
               />
             </div>
             <div className="col-span-full grid grid-cols-subgrid gap-1">
@@ -59,11 +65,15 @@ export const Gallery = () => {
                 alt={'Default Image'}
                 className="z-0 h-full w-full rounded-none object-cover "
                 src={'/clubs/shots/04.jpg'}
+                width={500}
+                height={500}
               />
               <Image
                 alt={'Default Image'}
                 className="z-0 h-full w-full rounded-none rounded-br-lg object-cover"
                 src={'/clubs/shots/06.jpg'}
+                width={500}
+                height={500}
               />
             </div>
           </div>
@@ -87,8 +97,10 @@ export const Gallery = () => {
               <div className="mx-1 mb-10 mt-6">
                 <Image
                   src={shot.src}
-                  className="z-0 h-full min-h-[250px] w-full object-cover"
+                  className="z-0 h-full min-h-[250px] w-screen object-cover"
                   alt={shot.name}
+                  width={500}
+                  height={300}
                 />
               </div>
             </SwiperSlide>

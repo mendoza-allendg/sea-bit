@@ -6,8 +6,8 @@ import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
 import React from 'react'
-import { Card, CardHeader, Image } from '@nextui-org/react'
-
+import { Card, CardHeader } from '@nextui-org/react'
+import Image from 'next/image'
 type Location = {
   name: string
   src: string
@@ -53,6 +53,8 @@ const LocationCard = ({ location }: { location: Location }) => {
         alt={name}
         className="z-0 min-h-[250px] w-full object-cover"
         src={src}
+        width={500}
+        height={500}
       />
     </Card>
   )
