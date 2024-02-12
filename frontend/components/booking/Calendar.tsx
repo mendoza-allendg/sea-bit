@@ -19,6 +19,7 @@ export const Calendar = () => {
           onSelect={setSelectedDateRange}
           numberOfMonths={1}
           showOutsideDays={true}
+          disabled={{ before: new Date() }}
         />
       </div>
       <div className="hidden h-[350px] xl:block">
@@ -27,6 +28,7 @@ export const Calendar = () => {
           selected={selectedDateRange}
           onSelect={setSelectedDateRange}
           numberOfMonths={2}
+          disabled={{ before: new Date() }}
         />
       </div>
     </>
