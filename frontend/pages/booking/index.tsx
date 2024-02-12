@@ -1,7 +1,7 @@
 import DefaultLayout from '@/layouts/default'
 import { MainTitle } from '@/components/shared/typography'
-
-import { Card, Image } from '@nextui-org/react'
+import Image from 'next/image'
+import { Card } from '@nextui-org/react'
 import {
   BookingSummary,
   Calendar,
@@ -10,8 +10,16 @@ import {
   AddOns,
 } from '@/components/booking'
 import { SectionBase } from '@/components/shared/base'
+// import { useForm } from 'react-hook-form'
 
 export default function IndexPage() {
+  // const { control, handleSubmit } = useForm({
+  //   defaultValues: {
+  //     email: '',
+  //     password: '',
+  //   },
+  // })
+
   return (
     <DefaultLayout>
       <section className="p-b-8 md:p-b-10 flex flex-col gap-4">
@@ -21,6 +29,8 @@ export default function IndexPage() {
               alt={'Default Image'}
               className="z-0 object-cover"
               src={'/clubs/lakbay.png'}
+              width={500}
+              height={500}
             />
           </Card>
           <div className="ml-2">

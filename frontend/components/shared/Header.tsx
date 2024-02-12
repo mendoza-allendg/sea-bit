@@ -1,5 +1,4 @@
 import {
-  Image,
   Button,
   Dropdown,
   DropdownItem,
@@ -9,14 +8,14 @@ import {
 } from '@nextui-org/react'
 import { FaBars, FaSearch } from 'react-icons/fa'
 import { AuthButton } from '@/components/authentication/AuthButton'
-
+import Image from 'next/image'
 export const Header = () => {
   return (
     <div className="sticky top-0 z-50 flex h-16 w-full border-b-[1px] border-solid border-gray-300 bg-white py-1.5">
       {/* TODO: change padding for responsiveness */}
       <div className="container mx-auto flex w-full items-center justify-between px-6 lg:px-10 xl:px-20 2xl:px-48">
         <Link href="/">
-          <Image src={'/logo3.png'} width={140} height={120} />
+          <Image alt="logo" src={'/logo3.png'} width={140} height={120} />
         </Link>
         <div className="flex-h flex">
           <Button variant="light" className="p-3">
