@@ -26,8 +26,8 @@ const PackageOption = (props: Props) => {
     <Component
       {...getBaseProps()}
       className={cn(
-        'group inline-flex flex-row-reverse items-center justify-between tap-highlight-transparent hover:opacity-70 active:opacity-50',
-        'cursor-pointer gap-4 rounded-lg border-2 border-default p-4 md:w-[200px]',
+        'tap-highlight-transparent group inline-flex flex-row-reverse items-center justify-between hover:opacity-70 active:opacity-50',
+        'border-default cursor-pointer gap-4 rounded-lg border-2 p-4 md:w-[200px]',
         'data-[selected=true]:border-primary',
       )}
     >

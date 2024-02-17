@@ -1,12 +1,4 @@
-import {
-  Button,
-  Dropdown,
-  DropdownItem,
-  DropdownTrigger,
-  DropdownMenu,
-  Link,
-} from '@nextui-org/react'
-import { FaBars, FaSearch } from 'react-icons/fa'
+import { Link } from '@nextui-org/react'
 import { AuthButton } from '@/components/authentication/AuthButton'
 import Image from 'next/image'
 export const Header = () => {
@@ -15,29 +7,10 @@ export const Header = () => {
       {/* TODO: change padding for responsiveness */}
       <div className="container mx-auto flex w-full items-center justify-between px-6 lg:px-10 xl:px-20 2xl:px-48">
         <Link href="/">
-          <Image alt="logo" src={'/logo3.png'} width={140} height={120} />
+          <Image alt="logo" src={'/nugiri.png'} width={100} height={100} />
         </Link>
         <div className="flex-h flex">
-          <Button variant="light" className="p-3">
-            <FaSearch />
-            <span className="text-sm">Search</span>
-          </Button>
           <AuthButton />
-          <Dropdown className="p-1" placement="bottom">
-            <DropdownTrigger>
-              <Button variant="light">
-                <FaBars />
-                <span className="text-sm">Menu</span>
-              </Button>
-            </DropdownTrigger>
-            <DropdownMenu aria-label="Static Actions">
-              <DropdownItem key="new">My Bookings</DropdownItem>
-              <DropdownItem key="edit">Settings</DropdownItem>
-              <DropdownItem key="delete" className="text-danger" color="danger">
-                Log out
-              </DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
         </div>
       </div>
     </div>
