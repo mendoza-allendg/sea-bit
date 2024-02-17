@@ -4,10 +4,9 @@ import Image from 'next/image'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
+import { Card, CardFooter } from '@/components/ui/card'
 
 import React from 'react'
-import { Button, Card, CardFooter } from '@nextui-org/react'
-import Link from 'next/link'
 
 type Club = {
   name: string
@@ -54,7 +53,7 @@ const SAMPLE_CLUBS: Club[] = [
 ]
 
 const ClubCard = ({ club }: { club: Club }) => {
-  const { src, name, location } = club
+  const { src, name } = club
 
   return (
     <Card className="max-h-[250px] w-full">
@@ -68,13 +67,9 @@ const ClubCard = ({ club }: { club: Club }) => {
       <CardFooter className="flex items-center">
         <div className="flex flex-grow flex-col">
           <div className="flex flex-col">
-            <span className="text-sm font-semibold">{name}</span>
-            <span className="text-tiny">{location}</span>
+            <p className="text-sm font-semibold">{name}</p>
           </div>
         </div>
-        <Button radius="full" size="sm" color="primary" variant="solid">
-          <Link href="/booking">Book</Link>
-        </Button>
       </CardFooter>
     </Card>
   )
