@@ -24,9 +24,7 @@ export default function DefaultLayout({
       </NextHead>
       <Header />
       {/* TODO: change padding for responsiveness */}
-      <main className="container mx-auto flex-grow px-6 lg:px-10 xl:px-20 2xl:px-48">
-        {children}
-      </main>
+      <main className="container mx-auto flex-grow">{children}</main>
       <Footer />
     </div>
   )
