@@ -104,7 +104,7 @@ export const Footer = () => {
   return (
     <div className="border-t-1 static bottom-0 flex h-auto w-full justify-center border-solid border-gray-300 bg-gray-100">
       <div className="flex w-full flex-col items-center justify-center">
-        <div className="container flex w-full flex-wrap items-start justify-center px-6 py-7 lg:px-10 xl:px-20 2xl:px-14">
+        <div className="container flex w-full flex-wrap items-start justify-center">
           <div className="mx-auto flex max-w-md flex-1 flex-shrink-0 flex-nowrap justify-center text-xs">
             <div className="flex flex-col justify-start p-4">
               <span className="pb-1.5 text-base font-bold">Contact Us</span>
