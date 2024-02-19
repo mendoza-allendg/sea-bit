@@ -1,7 +1,4 @@
 import Image from 'next/image'
-import 'swiper/css'
-import 'swiper/css/pagination'
-import 'swiper/css/navigation'
 import { Card } from '@/components/ui/card'
 import React from 'react'
 import {
@@ -9,6 +6,7 @@ import {
   IoLocationOutline,
   IoCalendarOutline,
 } from 'react-icons/io5'
+import { Button } from '../ui/button'
 
 type Club = {
   name: string
@@ -103,20 +101,6 @@ const SAMPLE_CLUBS: Club[] = [
     src: '/clubs/shots/03.jpg',
     price: '1,000',
   },
-  {
-    name: 'Sisid Timog',
-    logo: '/clubs/sisid_timog.jpg',
-    location: 'Bogo, Cebu',
-    src: '/clubs/shots/02.jpg',
-    price: '1,750',
-  },
-  {
-    name: 'Traveling Tambulero',
-    logo: '/clubs/traveling_tambulero.jpg',
-    location: 'Coron, Palawan',
-    src: '/clubs/shots/06.jpg',
-    price: '4,000',
-  },
 ]
 
 const ClubCard = ({ club }: { club: Club }) => {
@@ -140,27 +124,39 @@ const ClubCard = ({ club }: { club: Club }) => {
 
 export const ClubList = () => {
   return (
-    <div className="grid-rows-auto grid w-full gap-4 sm:grid-cols-3 md:grid-cols-4">
-      {SAMPLE_CLUBS.map((club, i) => (
-        <div key={i}>
-          <ClubCard club={club} />
-          <div>
-            <p className="font-semibold">{club.name}</p>
-            <div className="flex flex-row items-center gap-1">
-              <IoLocationOutline color="#64748b" />
-              <p className="text-sm text-muted-foreground">{club.location}</p>
+    <div>
+      <div className="grid-rows-auto grid w-full gap-4 sm:grid-cols-3 md:grid-cols-4">
+        {SAMPLE_CLUBS.map((club, i) => (
+          <div key={i}>
+            <ClubCard club={club} />
+            <div>
+              <p className="font-semibold">{club.name}</p>
+              <div className="flex flex-row items-center gap-1">
+                <IoLocationOutline color="#64748b" />
+                <p className="text-sm text-muted-foreground">{club.location}</p>
+              </div>
+              <div className="flex flex-row items-center gap-1">
+                <IoCalendarOutline color="#64748b" />
+                <p className="text-sm text-muted-foreground">
+                  March 6 - 7, 2024
+                </p>
+              </div>
+              <p className="mt-2 text-sm">
+                {' '}
+                <strong>&#8369;{club.price} PHP</strong>/person
+              </p>
             </div>
-            <div className="flex flex-row items-center gap-1">
-              <IoCalendarOutline color="#64748b" />
-              <p className="text-sm text-muted-foreground">March 6 - 7, 2024</p>
-            </div>
-            <p className="mt-2 text-sm">
-              {' '}
-              <strong>&#8369;{club.price} PHP</strong>/person
-            </p>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
+      <div className="mt-8 flex flex-col items-center justify-center gap-4">
+        <h2 className="text-xl font-semibold">
+          Continue finding your favorite clubs
+        </h2>
+        <Button variant={'outline'} className="h-14">
+          <h3 className="font-bold">Show more</h3>
+        </Button>
+      </div>
     </div>
   )
 }

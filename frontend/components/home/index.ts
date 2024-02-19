@@ -1,3 +1,3 @@
 export * from './SearchBar'
-export * from './LocationCarousel'
+export * from './LocationList'
 export * from './ClubList'
