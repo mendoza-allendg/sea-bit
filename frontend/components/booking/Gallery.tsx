@@ -1,34 +1,29 @@
 import { FaGripHorizontal } from 'react-icons/fa'
 import { Button } from '@nextui-org/react'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination, Navigation } from 'swiper/modules'
 import Image from 'next/image'
-import 'swiper/css'
-import 'swiper/css/pagination'
-import 'swiper/css/navigation'
 
-const SAMPLE_SHOTS = [
-  {
-    src: '/clubs/shots/01.jpg',
-    name: '01',
-  },
-  {
-    src: '/clubs/shots/02.jpg',
-    name: '01',
-  },
-  {
-    src: '/clubs/shots/03.jpg',
-    name: '01',
-  },
-  {
-    src: '/clubs/shots/04.jpg',
-    name: '01',
-  },
-  {
-    src: '/clubs/shots/06.jpg',
-    name: '01',
-  },
-]
+// const SAMPLE_SHOTS = [
+//   {
+//     src: '/clubs/shots/01.jpg',
+//     name: '01',
+//   },
+//   {
+//     src: '/clubs/shots/02.jpg',
+//     name: '01',
+//   },
+//   {
+//     src: '/clubs/shots/03.jpg',
+//     name: '01',
+//   },
+//   {
+//     src: '/clubs/shots/04.jpg',
+//     name: '01',
+//   },
+//   {
+//     src: '/clubs/shots/06.jpg',
+//     name: '01',
+//   },
+// ]
 
 export const Gallery = () => {
   return (
@@ -82,7 +77,7 @@ export const Gallery = () => {
           </div>
         </div>
       </div>
-      <div className="min-h-[300px] w-full sm:hidden">
+      {/* <div className="min-h-[300px] w-full sm:hidden">
         <Swiper
           spaceBetween={15}
           slidesPerView={1}
@@ -106,7 +101,7 @@ export const Gallery = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
+      </div> */}
     </>
   )
 }

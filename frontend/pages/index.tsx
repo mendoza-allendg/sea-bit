@@ -1,5 +1,5 @@
 import DefaultLayout from '@/layouts/default'
-import { ClubList, LocationCarousel, SearchBar } from '@/components/home'
+import { ClubList, LocationList, SearchBar } from '@/components/home'
 import { SectionBase } from '@/components/shared/base'
 
 export default function IndexPage() {
@@ -10,7 +10,7 @@ export default function IndexPage() {
           <SearchBar />
         </div>
         <SectionBase title={'Where to?'}>
-          <LocationCarousel />
+          <LocationList />
         </SectionBase>
         <SectionBase title={'Find your favorite clubs'}>
           <ClubList />
