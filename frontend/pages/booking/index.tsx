@@ -1,4 +1,4 @@
-import DefaultLayout from '@/layouts/default'
+import BookingLayout from '@/layouts/booking'
 import { MainTitle } from '@/components/shared/typography'
 import Image from 'next/image'
 import { Card } from '@nextui-org/react'
@@ -21,7 +21,7 @@ export default function IndexPage() {
   // })
 
   return (
-    <DefaultLayout>
+    <BookingLayout>
       <section className="p-b-8 md:p-b-10 flex flex-col gap-4">
         <div className="flex flex-row items-center py-5">
           <Card className="max-h-[50px] max-w-[50px]">
@@ -55,6 +55,6 @@ export default function IndexPage() {
           </div>
         </div>
       </section>
-    </DefaultLayout>
+    </BookingLayout>
   )
 }

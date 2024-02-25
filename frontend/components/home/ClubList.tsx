@@ -129,7 +129,7 @@ export const ClubList = () => {
         {SAMPLE_CLUBS.map((club, i) => (
           <div key={i}>
             <ClubCard club={club} />
-            <div>
+            <div className="mb-4 mt-2">
               <p className="font-semibold">{club.name}</p>
               <div className="flex flex-row items-center gap-1">
                 <IoLocationOutline color="#64748b" />
@@ -142,7 +142,6 @@ export const ClubList = () => {
                 </p>
               </div>
               <p className="mt-2 text-sm">
-                {' '}
                 <strong>&#8369;{club.price} PHP</strong>/person
               </p>
             </div>
@@ -153,7 +152,7 @@ export const ClubList = () => {
         <h2 className="text-xl font-semibold">
           Continue finding your favorite clubs
         </h2>
-        <Button variant={'outline'} className="h-14">
+        <Button variant={'outline'} size={'lg'} className="h-14">
           <h3 className="font-bold">Show more</h3>
         </Button>
       </div>

@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input'
 
 export const SearchBar = () => {
   return (
-    <div className="flex w-4/5 max-w-[50rem] flex-col items-center justify-between rounded-md bg-white py-1 pl-3 pr-1 shadow-xl sm:flex-row">
+    <div className="flex w-4/5 max-w-[50rem] flex-col items-center justify-between rounded-md bg-white py-4 pl-3 pr-1 shadow-xl sm:flex-row sm:py-1">
       <div className="mb-3 flex w-full flex-row items-center justify-center sm:mb-0 ">
         <FaSearch color="#999999" />
         <Input
