@@ -40,8 +40,8 @@ const LocationCard = ({ location }: { location: Location }) => {
   return (
     <Card className="relative h-[250px] w-full">
       <CardHeader className="absolute top-1 z-10 flex-col !items-start">
-        <p className="text-xs font-bold uppercase text-white/60">New!</p>
-        <p className="text-large font-bold text-white">{name}</p>
+        <p className="font-bold uppercase text-white/60">New!</p>
+        <p className="text-lg font-bold text-white">{name}</p>
       </CardHeader>
       <Image
         alt={name}
@@ -64,7 +64,7 @@ export const LocationList = () => {
         ))}
       </div>
       <div className="mt-4 flex justify-center">
-        <Button variant={'outline'} className=" h-14">
+        <Button variant={'outline'} size={'lg'} className=" h-14">
           <h3 className="font-bold">See all locations</h3>
         </Button>
       </div>
