@@ -1,25 +1,13 @@
-import {
-  Button,
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
-  Divider,
-} from '@nextui-org/react'
-
+import { Button } from '@/components/ui/button'
+import { Card, CardHeader, CardContent, CardFooter } from '@/components/ui/card'
+import { Separator } from '@/components/ui/separator'
 type ButtonProps = {
   isFull?: boolean
 }
 const ReservationButton = (props: ButtonProps) => {
   const { isFull = false } = props
   return (
-    <Button
-      color="primary"
-      variant="solid"
-      size="lg"
-      radius="md"
-      {...(isFull && { className: 'w-full' })}
-    >
+    <Button {...(isFull && { className: 'w-full' })}>
       <span className="text-base font-bold">Reserve</span>
     </Button>
   )
@@ -29,11 +17,11 @@ export const BookingSummary = () => {
   return (
     <>
       <div className="hidden md:block">
-        <Card shadow={'lg'} className="ml-auto min-w-[250px] max-w-[400px] p-3">
+        <Card className="ml-auto min-w-[250px] max-w-[400px] p-3 shadow-lg">
           <CardHeader className="gap-3">
             <span className="text-2xl font-semibold">Summary</span>
           </CardHeader>
-          <CardBody className="mt-2">
+          <CardContent className="mt-2">
             <div className="flex flex-col gap-4">
               <div className="flex flex-row justify-between">
                 <span className="text-base">Introduction</span>
@@ -47,13 +35,13 @@ export const BookingSummary = () => {
                 <span className="text-base">Weights rental</span>
                 <span className="text-base">&#8369;250 PHP</span>
               </div>
-              <Divider className="self-center" />
+              <Separator className="self-center" />
               <div className="flex flex-row justify-between">
                 <span className="text-lg font-bold">Total</span>
                 <span className="text-lg font-bold">&#8369;2,500 PHP</span>
               </div>
             </div>
-          </CardBody>
+          </CardContent>
           <CardFooter>
             <ReservationButton isFull />
           </CardFooter>
