@@ -6,8 +6,8 @@ import {
   BookingSummary,
   Calendar,
   Gallery,
-  PackageSelection,
   AddOns,
+  Packages,
 } from '@/components/booking'
 import { SectionBase } from '@/components/shared/base'
 // import { useForm } from 'react-hook-form'
@@ -41,7 +41,7 @@ export default function IndexPage() {
         <div className="md:flex md:justify-between">
           <div className="md:pr-4">
             <SectionBase title={'Packages'}>
-              <PackageSelection />
+              <Packages />
             </SectionBase>
             <SectionBase title={'Add ons'}>
               <AddOns />
