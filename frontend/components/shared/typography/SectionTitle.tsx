@@ -1,7 +1,7 @@
 type Props = {
-  text: string
+  children: React.ReactNode
 }
 
-export const SectionTitle = ({ text }: Props) => {
-  return <h1 className="text-2xl font-bold ">{text}</h1>
+export const SectionTitle = ({ children }: Props) => {
+  return <h1 className="text-2xl font-semibold">{children}</h1>
 }

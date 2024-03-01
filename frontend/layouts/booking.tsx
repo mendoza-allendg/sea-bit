@@ -1,8 +1,8 @@
 import { Footer } from '@/components/shared/Footer'
-import { Header } from '@/components/shared/header'
+import { BookingHeader as Header } from '@/components/shared/header'
 import NextHead from 'next/head'
 
-export default function DefaultLayout({
+export default function BookingLayout({
   children,
 }: {
   children: React.ReactNode
@@ -23,8 +23,9 @@ export default function DefaultLayout({
         <link href="./output.css" rel="stylesheet" />
       </NextHead>
       <Header />
-      {/* TODO: change padding for responsiveness */}
-      <main className="container mx-auto flex-grow">{children}</main>
+      <main className="container mx-auto flex-grow px-6 lg:px-10 xl:px-20 2xl:px-48">
+        {children}
+      </main>
       <Footer />
     </div>
   )

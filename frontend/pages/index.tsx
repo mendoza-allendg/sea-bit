@@ -1,5 +1,7 @@
 import DefaultLayout from '@/layouts/default'
-import { ClubCarousel, LocationCarousel, SearchBar } from '@/components/home'
+import { ClubList, LocationList, SearchBar } from '@/components/home'
+import { SectionBase } from '@/components/shared/base'
+
 export default function IndexPage() {
   return (
     <DefaultLayout>
@@ -7,12 +9,12 @@ export default function IndexPage() {
         <div className="flex min-h-[28rem] w-screen items-center justify-center rounded-b-md bg-[url('/landing-page-image.jpg')] bg-cover">
           <SearchBar />
         </div>
-        <div className="flex w-full py-5">
-          <LocationCarousel />
-        </div>
-        <div className="flex w-full py-5">
-          <ClubCarousel />
-        </div>
+        <SectionBase title={'Where to?'}>
+          <LocationList />
+        </SectionBase>
+        <SectionBase title={'Find your favorite clubs'}>
+          <ClubList />
+        </SectionBase>
       </section>
     </DefaultLayout>
   )
