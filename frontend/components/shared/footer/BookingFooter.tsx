@@ -106,7 +106,7 @@ export const BookingFooter = () => {
       <div className="flex w-full flex-col items-center justify-center">
         <div className="container mx-auto flex w-full items-center justify-between px-6 lg:px-10 xl:px-2 2xl:px-24">
           <div className="mx-auto flex max-w-md flex-1 flex-shrink-0 flex-nowrap justify-start text-xs">
-            <div className="flex flex-col justify-start py-4 px-5">
+            <div className="flex flex-col justify-start px-5 py-4">
               <span className="pb-1.5 text-base font-bold">Contact Us</span>
               <ul>
                 {COMPANY_CONTACT_METHODS.map((contact, i) => (
