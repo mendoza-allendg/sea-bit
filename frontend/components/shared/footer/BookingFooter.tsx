@@ -100,13 +100,13 @@ const PAYMENT_METHOD_LOGOS = [
   },
 ]
 
-export const Footer = () => {
+export const BookingFooter = () => {
   return (
     <div className="border-t-1 static bottom-0 flex h-auto w-full justify-center border-solid border-gray-300 bg-gray-100">
       <div className="flex w-full flex-col items-center justify-center">
-        <div className="container flex w-full flex-wrap items-start justify-center">
-          <div className="mx-auto flex max-w-md flex-1 flex-shrink-0 flex-nowrap justify-center text-xs">
-            <div className="flex flex-col justify-start p-4">
+        <div className="container mx-auto flex w-full items-center justify-between px-6 lg:px-10 xl:px-2 2xl:px-24">
+          <div className="mx-auto flex max-w-md flex-1 flex-shrink-0 flex-nowrap justify-start text-xs">
+            <div className="flex flex-col justify-start py-4 px-5">
               <span className="pb-1.5 text-base font-bold">Contact Us</span>
               <ul>
                 {COMPANY_CONTACT_METHODS.map((contact, i) => (
@@ -160,9 +160,9 @@ export const Footer = () => {
             </div>
           </div>
 
-          <div className="mx-auto flex max-w-md flex-1 flex-shrink flex-col justify-center p-4 text-sm text-gray-500">
+          <div className="mx-auto flex max-w-md flex-1 flex-shrink flex-col justify-center py-4 pl-9 text-sm text-gray-500">
             <div className="pb-1.5">Payment Methods</div>
-            <div className="flex min-w-56 flex-wrap justify-center">
+            <div className="flex min-w-56 flex-wrap justify-start">
               {PAYMENT_METHOD_LOGOS.map((pmeth, i) => (
                 <Image
                   className="mt-1 w-14 rounded-lg border"

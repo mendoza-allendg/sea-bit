@@ -1,4 +1,5 @@
-import { Footer } from '@/components/shared/Footer'
+import { BookingFooter } from '@/components/shared/footer/BookingFooter'
+import { Footer } from '@/components/shared/footer/Footer'
 import { BookingHeader as Header } from '@/components/shared/header'
 import NextHead from 'next/head'
 
@@ -26,7 +27,7 @@ export default function BookingLayout({
       <main className="container mx-auto flex-grow px-6 lg:px-10 xl:px-20 2xl:px-48">
         {children}
       </main>
-      <Footer />
+      <BookingFooter />
     </div>
   )
 }
