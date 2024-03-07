@@ -17,7 +17,7 @@ const COMPANY_CONTACT_METHODS = [
 
 const COMPANY_INFOS = [
   {
-    name: 'About Us',
+    name: 'About Our Company',
     link: '#',
   },
   {
@@ -104,9 +104,9 @@ export const BookingFooter = () => {
   return (
     <div className="border-t-1 static bottom-0 flex h-auto w-full justify-center border-solid border-gray-300 bg-gray-100">
       <div className="flex w-full flex-col items-center justify-center">
-        <div className="container mx-auto flex w-full items-center justify-between px-6 lg:px-10 xl:px-2 2xl:px-24">
-          <div className="mx-auto flex max-w-md flex-1 flex-shrink-0 flex-nowrap justify-start text-xs">
-            <div className="flex flex-col justify-start px-5 py-4">
+        <div className="container mx-auto flex w-full flex-wrap items-center justify-between px-6 lg:px-10 xl:px-20 2xl:px-48">
+          <div className="flex max-w-md flex-1 flex-shrink-0 flex-nowrap justify-start text-xs">
+            <div className="flex flex-col justify-start py-4 pr-4">
               <span className="pb-1.5 text-base font-bold">Contact Us</span>
               <ul>
                 {COMPANY_CONTACT_METHODS.map((contact, i) => (
@@ -160,9 +160,9 @@ export const BookingFooter = () => {
             </div>
           </div>
 
-          <div className="mx-auto flex max-w-md flex-1 flex-shrink flex-col justify-center py-4 pl-9 text-sm text-gray-500">
-            <div className="pb-1.5">Payment Methods</div>
-            <div className="flex min-w-56 flex-wrap justify-start">
+          <div className="flex max-w-[27rem] flex-1 flex-shrink flex-col justify-center py-4 text-sm text-gray-500">
+            <div className="pb-1.5 pl-4">Payment Methods</div>
+            <div className="ml-8 flex min-w-56 flex-wrap justify-start">
               {PAYMENT_METHOD_LOGOS.map((pmeth, i) => (
                 <Image
                   className="mt-1 w-14 rounded-lg border"

@@ -104,8 +104,8 @@ export const Footer = () => {
   return (
     <div className="border-t-1 static bottom-0 flex h-auto w-full justify-center border-solid border-gray-300 bg-gray-100">
       <div className="flex w-full flex-col items-center justify-center">
-        <div className="flex w-full flex-wrap items-start justify-center">
-          <div className="mx-auto flex max-w-md flex-1 flex-shrink-0 flex-nowrap justify-center text-xs">
+        <div className="container mx-auto flex w-full flex-wrap items-center justify-between">
+          <div className="flex max-w-md flex-1 flex-shrink-0 flex-nowrap justify-start text-xs">
             <div className="flex flex-col justify-start py-4 pr-4">
               <span className="pb-1.5 text-base font-bold">Contact Us</span>
               <ul>
@@ -160,9 +160,9 @@ export const Footer = () => {
             </div>
           </div>
 
-          <div className="mx-auto flex max-w-md flex-1 flex-shrink flex-col justify-center py-4 pl-9 text-sm text-gray-500">
-            <div className="pb-1.5">Payment Methods</div>
-            <div className="flex min-w-56 flex-wrap justify-start">
+          <div className="flex max-w-[27rem] flex-1 flex-shrink flex-col justify-center py-4 text-sm text-gray-500">
+            <div className="pb-1.5 pl-4">Payment Methods</div>
+            <div className="ml-8 flex min-w-56 flex-wrap justify-start">
               {PAYMENT_METHOD_LOGOS.map((pmeth, i) => (
                 <Image
                   className="mt-1 w-14 rounded-lg border"
