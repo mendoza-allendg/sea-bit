@@ -53,6 +53,7 @@ const LocationCard = ({ location }: { location: Location }) => {
     </Card>
   )
 }
+
 export const LocationList = () => {
   return (
     <div>
