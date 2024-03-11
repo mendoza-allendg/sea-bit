@@ -1,4 +1,4 @@
-import { Footer } from '@/components/shared/footer/Footer'
+import { Footer } from '@/components/shared/footer'
 import { Header } from '@/components/shared/header'
 import NextHead from 'next/head'
 

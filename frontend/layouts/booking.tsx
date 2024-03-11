@@ -1,4 +1,4 @@
-import { BookingFooter } from '@/components/shared/footer/BookingFooter'
+import { BookingFooter } from '@/components/shared/footer'
 import { BookingHeader as Header } from '@/components/shared/header'
 import NextHead from 'next/head'
 
