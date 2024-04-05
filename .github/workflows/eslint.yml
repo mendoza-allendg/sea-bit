@@ -28,6 +28,7 @@ jobs:
         run: cd frontend/ && yarn check-format
 
   rubocop:
+    needs: eslint
     runs-on: ubuntu-latest
 
     steps:
@@ -49,6 +50,7 @@ jobs:
         run: cd frontend/ && yarn check-format
 
   build_image:
+    needs: rubocop
     runs-on: ubuntu-latest
 
     steps:
@@ -70,6 +72,7 @@ jobs:
         run: cd frontend/ && yarn check-format
 
   prepare_deploy:
+    needs: build_image
     runs-on: ubuntu-latest
 
     steps:
