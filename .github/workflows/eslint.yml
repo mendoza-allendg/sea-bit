@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  ESLint:
+  eslint:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,4 +25,69 @@ jobs:
         run: cd frontend/ && yarn lint
 
       - name: Run Prettier
-        run: cd frontend/ && yarn check-format 
+        run: cd frontend/ && yarn check-format
+
+  rubocop:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: cd frontend/ && yarn install
+
+      - name: Run ESLint
+        run: cd frontend/ && yarn lint
+
+      - name: Run Prettier
+        run: cd frontend/ && yarn check-format
+
+  build image:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: cd frontend/ && yarn install
+
+      - name: Run ESLint
+        run: cd frontend/ && yarn lint
+
+      - name: Run Prettier
+        run: cd frontend/ && yarn check-format
+
+  prepare deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: cd frontend/ && yarn install
+
+      - name: Run ESLint
+        run: cd frontend/ && yarn lint
+
+      - name: Run Prettier
+        run: cd frontend/ && yarn check-format
+
+
