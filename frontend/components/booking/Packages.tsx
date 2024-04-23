@@ -1,4 +1,4 @@
-import { Button } from '../ui/button'
+import { PackageModal } from './PackageModal'
 
 export const Packages = () => {
   return (
@@ -10,9 +10,9 @@ export const Packages = () => {
           Lagoon. Each session will last around 1 hour. Minimum of 6 people.
         </p>
       </div>
-      <Button className="ml-4">
-        <span className="text-base font-bold">Change</span>
-      </Button>
+      <div className="ml-4">
+        <PackageModal />
+      </div>
     </div>
   )
 }
