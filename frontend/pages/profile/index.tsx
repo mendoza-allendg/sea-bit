@@ -7,48 +7,23 @@ import {
   Breadcrumbs,
   Input,
 } from '@nextui-org/react'
-
-const user_infos = [
-  {
-    firstname: 'Kim Allen Joseph',
-    lastname: 'Lazo',
-    email: 'kajlazo@pasoketits.com',
-    mobile: '09064595820',
-    password: "kapagako'ynagiisamadalasakongnagbabate",
-  },
-]
-
-function maskPassword(password: string) {
-  const truncatedPassword = password.slice(0, 15)
-  return '•'.repeat(truncatedPassword.length)
-}
-
-const fullname = `${user_infos[0].firstname} ${user_infos[0].lastname}`
-
-const UPPER_PROFILE_COMPONENTS = [
-  {
-    name: 'Name',
-    info: fullname,
-    type: 'name',
-  },
-  {
-    name: 'Email',
-    info: user_infos[0].email,
-    type: 'email',
-  },
-  {
-    name: 'Phone Number',
-    info: user_infos[0].mobile,
-    type: 'number',
-  },
-  {
-    name: 'Password',
-    info: maskPassword(user_infos[0].password),
-    type: 'password',
-  },
-]
+import { UPPER_PROFILE_COMPONENTS } from '@/pages/profile/ProfileComponents/UserInformation'
+import { useState } from 'react';
 
 export default function ProfilePage() {
+
+  const [profileComponents, setProfileComponents] = useState(UPPER_PROFILE_COMPONENTS);
+  
+  const handleChange = (index, value) => {
+    const updatedComponents = profileComponents.map((comp, i) => {
+      if (i === index) {
+        return { ...comp, info: value }; // Assuming you want to change 'info'
+      }
+      return comp;
+    });
+    setProfileComponents(updatedComponents);
+  };
+
   return (
     <DefaultLayout>
       <section className="h-full w-full">
@@ -58,7 +33,7 @@ export default function ProfilePage() {
               <BreadcrumbItem>Account</BreadcrumbItem>
               <BreadcrumbItem>Personal Info</BreadcrumbItem>
             </Breadcrumbs>
-            <SectionTitle text={'Personal info'}></SectionTitle>
+            <SectionTitle text="Personal info"></SectionTitle>
           </div>
 
           <div className="container mx-auto mb-9 flex h-full w-full flex-col items-start gap-3 rounded-lg px-4 text-slate-950 2xl:px-20">
@@ -71,7 +46,7 @@ export default function ProfilePage() {
                   subtitle={comp.info}
                 >
                   <div className="flex w-full flex-wrap gap-4 md:flex-nowrap">
-                    <Input type={comp.type} label={comp.name} />
+                    <Input type={comp.type} label={comp.name} defaultValue={comp.info} onChange={(e) => handleChange(i, e.target.value)}/>
                   </div>
                 </AccordionItem>
               </Accordion>
