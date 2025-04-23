@@ -1,5 +1,5 @@
 import DefaultLayout from '@/layouts/default'
-import { ClubList, LocationList, SearchBar } from '@/components/home'
+import { ClubList, LocationList } from '@/components/home'
 import { SectionBase } from '@/components/shared/base'
 
 export default function IndexPage() {

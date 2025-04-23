@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardHeader } from '@/components/ui/card'
+import { Card } from '@/components/ui/card'
 import Image from 'next/image'
 import { Button } from '../ui/button'
 import {
@@ -113,10 +113,15 @@ const LocationCard = ({ location }: { location: Location }) => {
         </div>
         <div className="items-right flex flex-col text-right">
           <div className="flex flex-row items-center">
-            {sightings.map((sighting) => {
+            {sightings.map((sighting, i) => {
               const Icon = sightingIcons[sighting]
               return (
-                <Icon size={30} color={'white'} className="drop-shadow-md" />
+                <Icon
+                  key={i}
+                  size={30}
+                  color={'white'}
+                  className="drop-shadow-md"
+                />
               )
             })}
           </div>
