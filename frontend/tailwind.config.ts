@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+const plugin = require('tailwindcss/plugin')
 
 const config = {
   darkMode: ['class'],
@@ -53,6 +54,12 @@ const config = {
           foreground: 'hsl(var(--card-foreground))',
         },
       },
+      textShadow: {
+        sm: '1px 1px 2px rgba(0,0,0,0.3)',
+        DEFAULT: '2px 2px 4px rgba(0,0,0,0.5)',
+        md: '3px 3px 6px rgba(0,0,0,0.5)',
+        lg: '4px 4px 10px rgba(0,0,0,0.6)',
+      },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
@@ -74,7 +81,19 @@ const config = {
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [
+    require('tailwindcss-animate'),
+    plugin(function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          'text-shadow': (value) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme('textShadow') },
+      )
+    }),
+  ],
 } satisfies Config
 
 export default config
