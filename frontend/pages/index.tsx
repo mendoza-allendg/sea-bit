@@ -1,14 +1,12 @@
 import DefaultLayout from '@/layouts/default'
-import { ClubList, LocationList, SearchBar } from '@/components/home'
+import { ClubList, LocationList } from '@/components/home'
 import { SectionBase } from '@/components/shared/base'
 
 export default function IndexPage() {
   return (
     <DefaultLayout>
       <section className="p-b-8 md:p-b-10 flex flex-col items-center justify-center gap-4">
-        <div className="flex min-h-[28rem] w-screen items-center justify-center rounded-b-md bg-[url('/landing-page-image.jpg')] bg-cover">
-          <SearchBar />
-        </div>
+        <div className="flex min-h-[28rem] w-screen items-center justify-center rounded-b-md bg-[url('/landing-page-image.jpg')] bg-cover"></div>
         <SectionBase title={'Where to?'}>
           <LocationList />
         </SectionBase>
