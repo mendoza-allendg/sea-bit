@@ -1,5 +1,5 @@
 import DefaultLayout from '@/layouts/default'
-import { ClubList, LocationList } from '@/components/home'
+import { LocationList } from '@/components/home'
 import { SectionBase } from '@/components/shared/base'
 
 export default function IndexPage() {
@@ -10,9 +10,9 @@ export default function IndexPage() {
         <SectionBase title={'Where to?'}>
           <LocationList />
         </SectionBase>
-        <SectionBase title={'Find your favorite clubs'}>
+        {/* <SectionBase title={'Find your favorite clubs'}>
           <ClubList />
-        </SectionBase>
+        </SectionBase> */}
       </section>
     </DefaultLayout>
   )

@@ -78,6 +78,22 @@ const SAMPLE_LOCATIONS: Location[] = [
     average_depth: 10,
     sightings: ['corals', 'fish'],
   },
+  {
+    name: 'Puerto Galera',
+    src: '/locations/puerto_galera.jpg',
+    country: 'Philippines',
+    spots: 4,
+    average_depth: 6,
+    sightings: ['turtle', 'corals', 'fish'],
+  },
+  {
+    name: 'Anda, Bohol',
+    src: '/locations/anda_bohol.jpg',
+    country: 'Philippines',
+    spots: 5,
+    average_depth: 16,
+    sightings: ['corals', 'fish'],
+  },
 ]
 
 const LocationCard = ({ location }: { location: Location }) => {
@@ -107,7 +123,7 @@ const LocationCard = ({ location }: { location: Location }) => {
           <p className="text-lg font-bold text-white text-shadow-md">
             {average_depth}m
           </p>
-          <p className="text-xs font-bold text-white text-shadow-md">
+          <p className="text-sm font-bold text-white text-shadow-md">
             avg depth
           </p>
         </div>
