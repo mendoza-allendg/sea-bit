@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  ESLint:
+  prepare_deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,4 +25,116 @@ jobs:
         run: cd frontend/ && yarn lint
 
       - name: Run Prettier
-        run: cd frontend/ && yarn check-format 
+        run: cd frontend/ && yarn check-format
+
+  build_release:
+    needs: prepare_deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: cd frontend/ && yarn install
+
+      - name: Run ESLint
+        run: cd frontend/ && yarn lint
+
+      - name: Run Prettier
+        run: cd frontend/ && yarn check-format
+
+  deploy_test_flight:
+    needs: build_release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: cd frontend/ && yarn install
+
+      - name: Run ESLint
+        run: cd frontend/ && yarn lint
+
+      - name: Run Prettier
+        run: cd frontend/ && yarn check-format
+
+  eas_submit:
+    needs: build_release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: cd frontend/ && yarn install
+
+      - name: Run ESLint
+        run: cd frontend/ && yarn lint
+
+      - name: Run Prettier
+        run: cd frontend/ && yarn check-format
+
+  compliance_test:
+    needs: eas_submit
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: cd frontend/ && yarn install
+
+      - name: Run ESLint
+        run: cd frontend/ && yarn lint
+
+      - name: Run Prettier
+        run: cd frontend/ && yarn check-format
+
+  production_build:
+    needs: compliance_test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: cd frontend/ && yarn install
+
+      - name: Run ESLint
+        run: cd frontend/ && yarn lint
+
+      - name: Run Prettier
+        run: cd frontend/ && yarn check-format
+
+
