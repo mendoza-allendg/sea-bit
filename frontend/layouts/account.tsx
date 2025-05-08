@@ -2,7 +2,7 @@ import { BookingFooter as Footer } from '@/components/shared/footer'
 import { BookingHeader as Header } from '@/components/shared/header'
 import NextHead from 'next/head'
 
-export default function BookingLayout({
+export default function AccountLayout({
   children,
 }: {
   children: React.ReactNode
