@@ -9,6 +9,7 @@ import {
   GiCoral,
   GiShipWreck,
 } from 'react-icons/gi'
+import { Link } from '@nextui-org/react'
 
 type Sighting = 'turtle' | 'jellyfish' | 'shipwreck' | 'corals' | 'fish'
 
@@ -32,7 +33,7 @@ const sightingIcons = {
 const SAMPLE_LOCATIONS: Location[] = [
   {
     name: 'Coron, Palawan',
-    src: '/locations/coron.jpg',
+    src: '/locations/coron2.jpg',
     country: 'Philippines',
     spots: 12,
     average_depth: 12,
@@ -156,7 +157,9 @@ export const LocationList = () => {
       <div className="grid-rows-auto grid w-full gap-4 sm:grid-cols-3 md:grid-cols-4">
         {SAMPLE_LOCATIONS.map((location, i) => (
           <div key={i}>
-            <LocationCard location={location} />
+            <Link href="/locations">
+              <LocationCard location={location} />
+            </Link>
           </div>
         ))}
       </div>
